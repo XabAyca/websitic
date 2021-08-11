@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import DarkMode from '../components/DarkMode';
+import Mouse from '../components/Mouse';
 import Navbar from '../components/Navbar';
 
 const About = () => {
   const {darkMode} = useContext(DarkMode)
   return (
-    <main className={darkMode? "about dark" : "about"}>
-      <Navbar/>
+    <main className={darkMode ? "about dark" : "about"}>
+      <Navbar />
+      <Mouse/>
       <div className="about-content">
         <h3>Websitic est une Agence de communication digitale à paris ayant pour mission de vous accompagner sur vos projets digitaux.</h3>
         <p>

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import CardMode from '../components/CardMode';
 import CardModeBtn from '../components/CardModeBtn';
 import DarkMode from '../components/DarkMode';
+import Mouse from '../components/Mouse';
 import Navbar from '../components/Navbar';
 import StudyCase from '../components/StudyCase';
 import StudyCaseNavbar from '../components/StudyCaseNavbar';
@@ -31,6 +32,7 @@ const Works = () => {
       <main className={darkMode ? "works dark" : "works"}>
         <CardModeBtn/>
         <Navbar />
+        <Mouse/>
         <div className="works-content">
           <h3>Au fil des années, nous avons pu accompagner les meilleurs.</h3>
           <p>Découvrez pas à pas comment nous avons été présent pour lancer vos marques préférées.</p>

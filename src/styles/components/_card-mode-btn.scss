@@ -8,6 +8,7 @@
   cursor: pointer;
   transition: 400ms ease-in;
   color:$secondary-color-dark;
+  z-index: 2;
 
   i{
     transition: 400ms ease-in;

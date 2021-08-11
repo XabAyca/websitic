@@ -23,7 +23,7 @@ const StudyCaseNavbar = () => {
                 })
                 document.getElementById(work.id).classList.add("active-card");
               }}
-              className='card'
+              className='mouse-hover card'
               activeClassName="active-card"
             >
               <h3>{work.project}</h3>
@@ -39,7 +39,7 @@ const StudyCaseNavbar = () => {
             <NavLink
               key={work.id}
               to={'/works/' + work.slug + '-study-case'}
-              className='nav-link'
+              className='nav-link mouse-hover'
               activeClassName='nav-link-active'>
               {work.project}
             </NavLink>

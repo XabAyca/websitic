@@ -9,13 +9,11 @@ const Navbar = () => {
       <div className="navbar-left">
         <i className="fab fa-optin-monster"></i>
         <h1>WebSitic</h1>
-        <NavLink exact to='/' className='nav-link' activeClassName='nav-link-active'>Accueil</NavLink>
-        <NavLink to='/about' className='nav-link' activeClassName='nav-link-active'>L'agence</NavLink>
-        <NavLink to='/works' className='nav-link' activeClassName='nav-link-active'>Projets</NavLink>
+        <NavLink exact to='/' className='nav-link mouse-hover' activeClassName='nav-link-active'>Accueil</NavLink>
+        <NavLink to='/about' className='nav-link mouse-hover' activeClassName='nav-link-active'>L'agence</NavLink>
+        <NavLink to='/works' className='nav-link mouse-hover' activeClassName='nav-link-active'>Projets</NavLink>
       </div>
-      <div>
-        <ThemeBtn/>
-      </div>
+      <ThemeBtn/>
     </div>
   );
 };
