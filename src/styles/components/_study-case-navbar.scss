@@ -37,10 +37,33 @@
 
   .nav-link-active{
     color: $secondary-color-dark;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
 
     &::after{
       width: 100%;
+    }
+  }
+  .card{
+    width:250px;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid $primary-color;
+    margin:25px;
+    cursor: pointer;
+    transition: 400ms;
+
+    h3{
+      color: $primary-color;
+    }
+    
+    &:hover{
+      transform: scale(1.3);
+      border-color:$secondary-color-dark;
+    }
+
+    &.active-card{
+      border-color:$secondary-color-dark;
     }
   }
 }

@@ -1,0 +1,22 @@
+.card-mode-btn{
+  position:absolute;
+  top:-20px;
+  left: 60%;
+  border-radius: 0 0 50px 50px;
+  background-color: $primary-color;
+  padding: 40px 5px 5px;
+  cursor: pointer;
+  transition: 400ms ease-in;
+  color:$secondary-color-dark;
+
+  i{
+    transition: 400ms ease-in;
+  }
+
+  &:hover{
+    top:-5px;
+    i{
+      transform: scale(1.2);
+    }
+  }
+}

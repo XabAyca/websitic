@@ -1,8 +1,10 @@
 @import './config';
+@import './pages/works';
+@import './pages/home';
+@import './pages/about';
+@import './components/card-mode-btn'; 
 @import './components/navbar';
 @import './components/theme-btn';
-@import './pages/home';
 @import './pages/not-found';
-@import './pages/about';
-@import './pages/works';
 @import './components/study-case-navbar';
+@import './components/study-case';

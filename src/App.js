@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import DarkMode from './components/DarkMode';
 import About from './pages/About';
@@ -9,10 +9,20 @@ import Works from './pages/Works';
 const App = () => {
   const [darkMode, setDarkmode] = useState(false)
 
+  useEffect(() => {
+    const isDark = JSON.parse(localStorage.getItem("themePreference"))
+    if (isDark !== undefined && isDark !== null) {
+      setDarkmode(isDark)
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkmode(true)
+    }
+  },[])
+
   return (
     <DarkMode.Provider value={{
       darkMode,
       toogleMode: () => {
+        localStorage.setItem("themePreference",String(!darkMode))
         setDarkmode(!darkMode)
       }
     }}

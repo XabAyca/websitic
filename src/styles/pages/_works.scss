@@ -1,6 +1,8 @@
 .works{
   background-color: $background-color;
   min-height: 100vh;
+  width: 100vw;
+  position:relative;
 
   .works-content{
     padding: 50px;
