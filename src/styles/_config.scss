@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@400;700&display=swap');
+
+$font-family1:'Poppins', sans-serif;
+$font-family2:'Noto Sans', sans-serif;
+
+$primary-color:#C17C74;
+$secondary-color:#2A3D45;
+$background-color:#DDC9B4;
+
+$primary-color-dark:#C17C74;
+$secondary-color-dark:beige;
+$background-color-dark:#454545;
+
+$danger:#f68fa0;
+$success:#bdcc72; 
+$infos:#93b9dc;
+
+
+*{
+  font-family: $font-family1;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  color: $secondary-color;
+}

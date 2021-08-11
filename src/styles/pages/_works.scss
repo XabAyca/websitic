@@ -1,0 +1,14 @@
+.works{
+  background-color: $background-color;
+  min-height: 100vh;
+
+  .works-content{
+    padding: 50px;
+  }
+
+  &.dark{
+    color: $secondary-color-dark;
+    background-color: $background-color-dark;
+  }
+
+}

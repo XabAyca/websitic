@@ -1,0 +1,46 @@
+.study-case-navbar{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  align-items: baseline;
+
+  .nav-link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $primary-color;
+    margin:10px;
+    position: relative;
+    transition: 1s ease-in-out;
+    letter-spacing: 0.05rem;
+    z-index: 1;
+    padding: 0 15px;
+
+    &::after{
+      content: "";
+      width: 0%;
+      height: 3px;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: -5%;
+      left:0;
+      z-index: -1;
+      transition: 1s ease-in-out;
+    }
+
+    &:hover{
+      color: $secondary-color-dark;
+      &::after{
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-link-active{
+    color: $secondary-color-dark;
+    letter-spacing: 0.1rem;
+
+    &::after{
+      width: 100%;
+    }
+  }
+}

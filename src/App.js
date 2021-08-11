@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import DarkMode from './components/DarkMode';
+import About from './pages/About';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Works from './pages/Works';
 
-function App() {
+const App = () => {
+  const [darkMode, setDarkmode] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkMode.Provider value={{
+      darkMode,
+      toogleMode: () => {
+        setDarkmode(!darkMode)
+      }
+    }}
+    >
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/about' component={About}/>
+        <Route exact path='/works' component={Works}/>
+        <Route path='/works/:project' component={Works}/>
+        <Route path='/' component={NotFound}/>
+      </Switch>
+    </DarkMode.Provider>
   );
-}
+};
 
 export default App;
