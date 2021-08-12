@@ -9,6 +9,7 @@
   transition: 400ms ease-in;
   color:$secondary-color-dark;
   z-index: 2;
+  animation: 1s open ;
 
   i{
     transition: 400ms ease-in;
@@ -19,5 +20,10 @@
     i{
       transform: scale(1.2);
     }
+  }
+
+  @keyframes open {
+    0%{top:-60px}
+    100%{top:-20px}
   }
 }

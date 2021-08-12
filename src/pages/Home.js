@@ -7,7 +7,7 @@ const Home = () => {
   const { darkMode } = useContext(DarkMode)
   
   return (
-    <main className={darkMode?"home dark":"home"}>
+    <main className={darkMode ? "home dark" : "home"}>
       <Navbar />
       <Mouse/>
       <div className='home-content'>

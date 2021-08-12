@@ -17,6 +17,12 @@
     i{
       font-size: 4rem;
       color: $primary-color;
+      animation: 20s logo infinite;
+    }
+
+    @keyframes logo {
+      0%{color: $primary-color;}
+      50%{color: $secondary-color-dark}
     }
 
 

@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import DarkMode from './components/DarkMode';
@@ -19,22 +20,24 @@ const App = () => {
   },[])
 
   return (
-    <DarkMode.Provider value={{
-      darkMode,
-      toogleMode: () => {
-        localStorage.setItem("themePreference",String(!darkMode))
-        setDarkmode(!darkMode)
-      }
-    }}
-    >
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/about' component={About}/>
-        <Route exact path='/works' component={Works}/>
-        <Route path='/works/:project' component={Works}/>
-        <Route path='/' component={NotFound}/>
-      </Switch>
-    </DarkMode.Provider>
+    <AnimatePresence>
+      <DarkMode.Provider value={{
+        darkMode,
+        toogleMode: () => {
+          localStorage.setItem("themePreference",String(!darkMode))
+          setDarkmode(!darkMode)
+        }
+      }}
+      >
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/works' component={Works}/>
+          <Route path='/works/:project' component={Works}/>
+          <Route path='/' component={NotFound}/>
+        </Switch>
+      </DarkMode.Provider>
+      </AnimatePresence>  
   );
 };
 
